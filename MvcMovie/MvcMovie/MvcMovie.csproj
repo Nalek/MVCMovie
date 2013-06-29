@@ -164,11 +164,26 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201306222302239_Initial.cs" />
+    <Compile Include="Migrations\201306222302239_Initial.Designer.cs">
+      <DependentUpon>201306222302239_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306222312495_AddRatingMig.cs" />
+    <Compile Include="Migrations\201306222312495_AddRatingMig.Designer.cs">
+      <DependentUpon>201306222312495_AddRatingMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201306230129140_AddDataAnnotationsMig.cs" />
+    <Compile Include="Migrations\201306230129140_AddDataAnnotationsMig.Designer.cs">
+      <DependentUpon>201306230129140_AddDataAnnotationsMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -283,12 +298,30 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\HelloWorld\Index.cshtml" />
+    <Content Include="Views\HelloWorld\Welcome.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movies\Create.cshtml" />
+    <Content Include="Views\Movies\Edit.cshtml" />
+    <Content Include="Views\Movies\Delete.cshtml" />
+    <Content Include="Views\Movies\SearchIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201306222302239_Initial.resx">
+      <DependentUpon>201306222302239_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306222312495_AddRatingMig.resx">
+      <DependentUpon>201306222312495_AddRatingMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201306230129140_AddDataAnnotationsMig.resx">
+      <DependentUpon>201306230129140_AddDataAnnotationsMig.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
